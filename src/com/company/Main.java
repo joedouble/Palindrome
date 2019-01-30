@@ -18,7 +18,7 @@ public class Main {
 
         userString = userString.replaceAll("[^a-zA-z]", "");
 
-        //System.out.println(userString);
+        //System.out.println("User's string with no spaces or special characters:  " + userString);
 
         for(int i = userString.length()-1; i >=0; i--)
         {
@@ -27,8 +27,15 @@ public class Main {
 
         comparedStrings = userString.equalsIgnoreCase(reversedString);
 
-        //System.out.println(reversedString);
-        System.out.println(comparedStrings);
+        //System.out.println("User's string reversed with no spaces or special characters:  " + reversedString);
+
+        System.out.println();
+
+        if (comparedStrings) {
+            System.out.println("It's " + comparedStrings + ". The word/phrase you entered is a palindrome.");
+        } else {
+            System.out.println("It's " + comparedStrings + ". The word/phrase you entered is not a palindrome.");
+        }
 
     }
 }
